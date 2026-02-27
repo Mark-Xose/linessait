@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Between the lines</title>
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Between the lines:team</div>
+            <nav class="nav-menu">
+                <a href="#games">Игры</a>
+                <a href="#developer">Разработчик</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#tips">Советы</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                <i class="fas fa-sun"></i>
+                <span>Светлая</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero) -->
+        <section class="hero">
+            <div class="container">
+                <h1>Мои игры на JavaScript</h1>
+                <p class="hero-subtitle">Инди-разработчик, создаю минималистичные веб-игры с душой</p>
+                <a href="#games" class="btn">Смотреть игры <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- Секция с играми -->
+<section id="games" class="games">
+    <div class="container">
+        <h2 class="section-title fade-in">🎮 Мои проекты</h2>
+        
+        <!-- Фильтры для игр и приложений -->
+        <div class="filters-container fade-in">
+            <div class="filters-header">
+                <h3 class="filters-title">
+                    <i class="fas fa-filter"></i> Фильтры
+                </h3>
+                <button class="filters-toggle" id="filtersToggle" aria-label="Показать/скрыть фильтры">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            
+            <div class="filters-panel" id="filtersPanel">
+                <div class="filter-group">
+                    <span class="filter-label">Тип проекта</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th-large"></i>
+                            <span>Все</span>
+                            <span class="filter-count">4</span>
+                        </button>
+                        <button class="filter-btn" data-filter="game">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Игры</span>
+                            <span class="filter-count">3</span>
+                        </button>
+                        <button class="filter-btn" data-filter="app">
+                            <i class="fas fa-cube"></i>
+                            <span>Web приложения</span>
+                            <span class="filter-count">1</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Теги</span>
+                    <div class="filter-tags">
+                        <span class="filter-tag" data-tag="js">#JS</span>
+                        <span class="filter-tag" data-tag="canvas">#Canvas</span>
+                        <span class="filter-tag" data-tag="logic">#Logic</span>
+                    </div>
+                </div>
+                
+                <button class="filter-reset" id="resetFilters">
+                    <i class="fas fa-undo-alt"></i>
+                    Сбросить все фильтры
+                </button>
+            </div>
+        </div>
+        
+        <!-- Карточка игры 1 - Gravity (ИГРА) -->
+        <div class="games-grid">
+            <!-- Карточка игры 1 - Gravity (ИГРА) -->
+            <div class="game-card fade-in" data-type="game" data-tags="js canvas">
+                <div class="game-preview" style="background: linear-gradient(145deg, #3b82f6, #8b5cf6);">
+                    <span class="game-icon"><i class="fas fa-gamepad"></i></span>
+                </div>
+                <h3>Gravity</h3>
+                <p>Вдохновленная игра Flappy Bird</p>
+                <div class="game-tags">
+                    <span>JS</span>
+                    <span>Canvas</span>
+                </div>
+                <a href="https://gravity-sooty-gamma.vercel.app/" class="game-link" target="_blank">Играть <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+            <!-- Карточка игры 2 - Neuron (ИГРА) -->
+            <div class="game-card fade-in" data-type="game" data-tags="js logic canvas">
+                <div class="game-preview" style="background: linear-gradient(145deg, #ec4899, #f43f5e);">
+                    <span class="game-icon"><i class="fas fa-chess-pawn"></i></span>
+                </div>
+                <h3>Neuron</h3>
+                <p>Игра про нейрон, что-то не обычное</p>
+                <div class="game-tags">
+                    <span>JS</span>
+                    <span>Logic</span>
+                    <span>Canvas</span>
+                </div>
+                <a href="https://neuron-two-ochre.vercel.app/" class="game-link" target="_blank">Играть <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            
+            <!-- Карточка игры 3 - Color Memory (ИГРА) -->
+            <div class="game-card fade-in" data-type="game" data-tags="js canvas">
+                <div class="game-preview" style="background: linear-gradient(145deg, #10b981, #059669);">
+                    <span class="game-icon"><i class="fas fa-joystick"></i></span>
+                </div>
+                <h3>Color Memory</h3>
+                <p>Попробуй запомнить последовательность плиток с цветами!</p>
+                <div class="game-tags">
+                    <span>Canvas</span>
+                    <span>JS</span>
+                </div>
+                <a href="https://colormemory-taupe.vercel.app/" class="game-link" target="_blank">Играть <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Карточка игры 4 - Tack (WEB ПРИЛОЖЕНИЕ) -->
+            <div class="game-card fade-in" data-type="app" data-tags="js canvas">
+                <div class="game-preview" style="background: linear-gradient(145deg, #f59e0b, #d97706);">
+                    <span class="game-icon"><i class="fas fa-cube"></i></span>
+                </div>
+                <h3>Tack</h3>
+                <p>WEB Приложение - создавай свои задачи, следи за прогрессом, получай опыт за выполненные задачи!</p>
+                <div class="game-tags">
+                    <span>JS</span>
+                    <span>Canvas</span>
+                </div>
+                <a href="https://tack-ebon.vercel.app/" class="game-link" target="_blank">Открыть <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Секция о разработчике -->
+        <section id="developer" class="developer">
+            <div class="container">
+                <h2 class="section-title fade-in">👨‍💻 Разработчик</h2>
+                <div class="developer-content fade-in">
+                    <div class="developer-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="developer-info">
+                        <h3>Привет! Я Денис</h3>
+                        <p>Я независимый разработчик игр на JavaScript. Создаю минималистичные, но увлекательные веб-игры, которые работают прямо в браузере. Мой подход — чистый код, плавная анимация и никакого лишнего функционала, только геймплей.</p>
+                        <p>Начал программировать в школе, а сейчас создаю игры, в которые играют люди по всему миру. Верю, что игры должны быть доступными, быстрыми и красивыми. Все мои проекты с открытым исходным кодом, чтобы каждый мог учиться и вдохновляться.</p>
+                        <div class="developer-stats">
+                            <div class="stat">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Игр создано</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Чистый JS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">Любовь к коду</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+<!-- копирование почты -->
+            <div class="additional-contacts">
+                <p>Скопируйте мою почту и напишите</p>
+                <div class="email-copy" onclick="copyEmail()">
+                <i class="fas fa-envelope"></i>
+                <span>ottodenis702@gmail.com</span>
+                <span class="copy-badge" id="copyBadge">Скопировано!</span>
+                </div>
+            </div>
+
+
+
+        <!-- Секция с советами по созданию WEB игр -->
+        <section id="tips" class="tips">
+            <div class="container">
+                <h2 class="section-title fade-in">💡 Советы по созданию WEB игр</h2>
+                <div class="tips-grid">
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-bolt tip-icon"></i>
+                        <h3>Начните с малого</h3>
+                        <p>Не пытайтесь сразу сделать RPG с открытым миром. Создайте простую аркаду или головоломку. Это поможет понять основы и не потерять мотивацию.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-paint-brush tip-icon"></i>
+                        <h3>Минимализм — это стильно</h3>
+                        <p>Для инди-игр не нужна сложная графика. Используйте простые формы, цвета и эффекты. Это работает отлично и грузится моментально.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-mobile-alt tip-icon"></i>
+                        <h3>Думайте о мобильных</h3>
+                        <p>Многие играют с телефонов. Делайте адаптивное управление: тапы, свайпы. Проверяйте игру на разных экранах.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-code tip-icon"></i>
+                        <h3>Изучайте Canvas и requestAnimationFrame</h3>
+                        <p>Для динамических игр это must-have. Они дают плавность и контроль над каждым кадром. Оптимизируйте через requestAnimationFrame.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-tachometer-alt tip-icon"></i>
+                        <h3>Следите за производительностью</h3>
+                        <p>Используйте инструменты разработчика, убирайте утечки памяти. 60 FPS — стандарт для любой браузерной игры.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <i class="fas fa-heart tip-icon"></i>
+                        <h3>Делитесь и получайте фидбек</h3>
+                        <p>Выкладывайте игры на форумы, спрашивайте мнение. Чужие глаза увидят баги и дадут идеи, которые вы не заметили.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Футер -->
+    <footer>
+        <div class="container footer-inner">
+            <p>© 2026 HoseGame · Сделано с <i class="fas fa-heart" style="color: var(--accent);"></i></p>
+            <div class="footer-links">
+                <a href="#games">Игры</a>
+                <a href="#developer">Разработчик</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
